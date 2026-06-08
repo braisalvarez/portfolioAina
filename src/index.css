@@ -13,7 +13,9 @@
   --text-faint:  rgba(240, 237, 232, 0.30);
 
   /* Accent */
-  --accent:      #c8ff00;
+  --accent_old:      #c8ff00;
+  --accent:      #e95864;
+
   --accent-ink:  #0c0c0c; /* texto sobre fondo acento */
 
   /* Lines */
