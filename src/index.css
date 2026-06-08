@@ -1,0 +1,81 @@
+@import "@fontsource-variable/bricolage-grotesque";
+@import "tailwindcss";
+
+:root {
+  /* Surfaces */
+  --bg:          #0c0c0c;
+  --bg-raised:   #141414;
+  --bg-subtle:   #1a1a1a;
+
+  /* Ink */
+  --text:        #f0ede8;
+  --text-muted:  rgba(240, 237, 232, 0.52);
+  --text-faint:  rgba(240, 237, 232, 0.30);
+
+  /* Accent */
+  --accent:      #c8ff00;
+  --accent-ink:  #0c0c0c; /* texto sobre fondo acento */
+
+  /* Lines */
+  --border:      rgba(240, 237, 232, 0.09);
+  --border-mid:  rgba(240, 237, 232, 0.16);
+
+  --font-sans:   'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+
+  /* Z-index scale */
+  --z-nav:     50;
+  --z-overlay: 60;
+}
+
+/* Base en @layer base para que las utilidades de Tailwind (margin/padding)
+   sigan ganando. Un reset sin capa anularía pt-*, mb-*, py-*, etc. */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg);
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+}
+
+/* Contenedor de página consistente */
+.shell {
+  width: 100%;
+  margin-inline: auto;
+  max-width: 1440px;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px)  { .shell { padding-inline: 3rem; } }
+@media (min-width: 1024px) { .shell { padding-inline: 4rem; } }
+
+/* Selección de texto en color de marca */
+::selection {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Cursor diferencial: oculta el cursor nativo cuando está activo */
+.cursor-none,
+.cursor-none * {
+  cursor: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

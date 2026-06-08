@@ -1,0 +1,77 @@
+// ============================================================
+//  ARCHIVO DE CONTENIDO — cambia aquí todos los textos
+// ============================================================
+
+export const content = {
+
+  // --- INFO PERSONAL ---
+  name: 'Aina Codina',
+  role: 'Diseñadora Gráfica & Motion Design',
+  location: 'Barcelona, España',
+  email: 'aina15codina@gmail.com',
+  available: true, // muestra el indicador "disponible para proyectos"
+
+  // --- HERO ---
+  hero: {
+    headline: 'Diseño que\nse mueve.',
+    subheadline:
+      'Diseñadora gráfica y motion designer. Soy entre Jesús y cristo',
+    ctaLabel: 'Ver proyectos',
+    ctaLink: '/proyectos',
+  },
+
+  // Disciplinas para la marquesina kinética del hero
+  disciplines: [
+    'Motion Design',
+    'Identidad Visual',
+    'Branding',
+    'Dirección de Arte',
+    'Animación 2D',
+    'Diseño Editorial',
+  ],
+
+  // --- SOBRE MÍ ---
+  about: {
+    intro:
+      'Trabajo en la intersección entre el diseño gráfico y el movimiento.',
+    bio: 'Soy diseñadora gráfica y motion designer con experiencia en identidad visual, branding y animación. Me interesa el momento en que una marca deja de estar quieta: cuando una idea encuentra su ritmo y empieza a comunicar por sí sola. Trabajo con estudios, agencias y marcas que buscan una voz visual con carácter.',
+    skills: ['After Effects', 'Illustrator', 'Photoshop', 'Cinema 4D', 'Premiere Pro', 'Figma'],
+    services: [
+      {
+        title: 'Motion Design',
+        description: 'Piezas en movimiento para marcas, redes y campañas. Del storyboard al render final.',
+      },
+      {
+        title: 'Identidad Visual',
+        description: 'Sistemas de marca completos: logotipo, tipografía, color y guía de aplicación.',
+      },
+      {
+        title: 'Dirección de Arte',
+        description: 'Concepto visual y dirección para proyectos audiovisuales y editoriales.',
+      },
+    ],
+  },
+
+  // --- CONTACTO ---
+  contact: {
+    heading: 'Hablemos.',
+    body: '¿Tienes un proyecto en mente? Estoy disponible para colaboraciones, encargos y proyectos a largo plazo.',
+  },
+
+  // --- REDES SOCIALES ---
+  social: {
+    instagram: 'https://instagram.com/tuusuario',
+    linkedin: 'https://linkedin.com/in/tuusuario',
+    behance: 'https://behance.net/tuusuario',
+    vimeo: 'https://vimeo.com/tuusuario',
+  },
+
+  // --- NAVEGACIÓN ---
+  nav: [
+    { label: 'Inicio', href: '/' },
+    { label: 'Proyectos', href: '/proyectos' },
+    { label: 'Sobre mí', href: '/sobre-mi' },
+    { label: 'Contacto', href: '/contacto' },
+  ],
+
+}
