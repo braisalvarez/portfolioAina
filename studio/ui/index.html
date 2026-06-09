@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Studio · Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <span class="dot"></span>
+          Studio<span class="muted"> · contenido del portfolio</span>
+        </div>
+        <div class="actions">
+          <span id="status" class="status"></span>
+          <button id="save" class="btn">Guardar</button>
+          <button id="publish" class="btn btn-accent">Publicar</button>
+        </div>
+      </div>
+    </header>
+
+    <main id="app" class="app">
+      <p class="loading">Cargando…</p>
+    </main>
+
+    <!-- Diálogo de publicación -->
+    <div id="publish-modal" class="modal" hidden>
+      <div class="modal-card">
+        <h2>Publicar cambios</h2>
+        <p class="muted small">Se guardará y se hará <code>git commit</code> + <code>git push</code>.</p>
+        <label class="field">
+          <span>Mensaje del commit</span>
+          <input id="commit-msg" type="text" value="Actualiza contenido del portfolio" />
+        </label>
+        <div class="modal-actions">
+          <button id="publish-cancel" class="btn">Cancelar</button>
+          <button id="publish-go" class="btn btn-accent">Publicar ahora</button>
+        </div>
+        <pre id="publish-log" class="log" hidden></pre>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
